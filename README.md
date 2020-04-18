@@ -6,3 +6,10 @@ Tic-Tac-Toe is a basic came to teach children logical thinking and analytical re
 - Advanced JS Game Logic
 - CSS Not Selector
 - CSS Shape Building
+
+data-cell
+
+Use classes for CSS
+Naming convention is lowercase snake
+Use id in JavaScript
+Nameing convention: camel case
