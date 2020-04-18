@@ -68,6 +68,13 @@ body {
     cursor: not-allowed;
 }
 
+/* Configure Hover to show possibilities*/
+.board.x .cell:not(.x):not(.circle):hover::before,
+.board.x .cell:not(.x):not(.circle):hover::after,
+    {
+    background-color: lightgrey;
+}
+
 /* Use pseudo element to draw X and O */
 /* Configure X marks */
 .cell.x::before,
