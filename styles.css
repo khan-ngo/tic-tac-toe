@@ -4,6 +4,15 @@
     box-sizing: border-box;
 }
 
+
+/* Set CSS variables */
+:root {
+    --cell-size: 100px;
+    /* set our X and Circles smaller than the size of the cell  */
+    --mark-size: cal(var(--cell-size) * 0.9);
+}
+
+
 body {
     margin: 0;
 }
@@ -14,13 +23,36 @@ body {
     display: grid;
     justify-content: center;
     align-content: center;
+    /* Align our X and Circles in middle of cells */
+    justify-items: center;
+    align-items: center;
     /* for 3x3 grid */
     grid-template-columns: repeat(3, auto)
 }
 
 .cell {
-    width: 100px;
-    height: 100px;
-    background-color: black;
-    border: 1px solid white;
+    width: var(--cell-size);
+    height: var(--cell-size);
+    border: 1px solid black;
+}
+
+/* Remove surrounding borders */
+.cell:first-child,
+.cell:nth-child(2),
+.cell:nth-child(3) {
+    border-top: none;
+}
+
+.cell:nth-child(3n + 1) {
+    border-left: none;
+}
+
+.cell:nth-child(3n +3) {
+    border-right: none;
+}
+
+.cell:last-child,
+.cell:nth-child(7),
+.cell:nth-child(8) {
+    border-bottom: none;
 }
